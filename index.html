@@ -87,17 +87,15 @@
 			}
 
 			.btn-stop {
-				/*color: #2eef24;*/
-				background: #4a4a4a;
+				color: #2eef24;
 			}
 			
-			/*.btn-start {
+			.btn-start {
 				color: rgb(255, 100, 100);
-			}*/
+			}
 
 			.btn-reset {
-				background: #4a4a4a;
-				/*color: rgb(41, 209, 255);*/
+				color: rgb(41, 209, 255);
 			}
 		</style>
 
@@ -109,34 +107,34 @@
 			<div class="slot-frame">
                 <!-- <ul>でリールを３列用意-->
 				<ul class="reels">
-					<li class="reel"><img src="img/kohacu.com_samune_000107.png"></li>
-					<li class="reel"><img src="img/fruit_grape_illust_108.png"></li>
-					<li class="reel"><img src="img/kohacu.com_samune_000107.png"></li>
-					<li class="reel"><img src="img/fruit_peach_illust_273.png"></li>
-					<li class="reel"><img src="img/melon-768x768.png"></li>
-					<li class="reel"><img src="img/R.png"></li>
-					<li class="reel"><img src="img/kohacu.com_samune_000107.png"></li>
-					<li class="reel"><img src="img/fruit_grape_illust_108.png"></li>
+					<li class="reel"><img src="kohacu.com_samune_000107.png"></li>
+					<li class="reel"><img src="fruit_grape_illust_108.png"></li>
+					<li class="reel"><img src="kohacu.com_samune_000107.png"></li>
+					<li class="reel"><img src="fruit_peach_illust_273.png"></li>
+					<li class="reel"><img src="melon-768x768.png"></li>
+					<li class="reel"><img src="R.png"></li>
+					<li class="reel"><img src="kohacu.com_samune_000107.png"></li>
+					<li class="reel"><img src="fruit_grape_illust_108.png"></li>
 				</ul>
 				<ul class="reels">
-					<li class="reel"><img src="img/R.png"></li>
-					<li class="reel"><img src="img/fruit_grape_illust_108.png"></li>
-					<li class="reel"><img src="img/melon-768x768.png"></li>
-					<li class="reel"><img src="img/kohacu.com_samune_000107.png"></li>
-					<li class="reel"><img src="img/fruit_peach_illust_273.png"></li>
-					<li class="reel"><img src="img/melon-768x768.png"></li>
-					<li class="reel"><img src="img/R.png"></li>
-					<li class="reel"><img src="img/fruit_grape_illust_108.png"></li>
+					<li class="reel"><img src="R.png"></li>
+					<li class="reel"><img src="fruit_grape_illust_108.png"></li>
+					<li class="reel"><img src="melon-768x768.png"></li>
+					<li class="reel"><img src="kohacu.com_samune_000107.png"></li>
+					<li class="reel"><img src="fruit_peach_illust_273.png"></li>
+					<li class="reel"><img src="melon-768x768.png"></li>
+					<li class="reel"><img src="R.png"></li>
+					<li class="reel"><img src="fruit_grape_illust_108.png"></li>
 				</ul>
 				<ul class="reels">
-					<li class="reel"><img src="img/fruit_peach_illust_273.png"></li>
-					<li class="reel"><img src="img/fruit_grape_illust_108.png"></li>
-					<li class="reel"><img src="img/R.png"></li>
-					<li class="reel"><img src="img/kohacu.com_samune_000107.png"></li>
-					<li class="reel"><img src="img/melon-768x768.png"></li>
-					<li class="reel"><img src="img/R.png"></li>
-					<li class="reel"><img src="img/fruit_peach_illust_273.png"></li>
-					<li class="reel"><img src="img/fruit_grape_illust_108.png"></li>
+					<li class="reel"><img src="fruit_peach_illust_273.png"></li>
+					<li class="reel"><img src="fruit_grape_illust_108.png"></li>
+					<li class="reel"><img src="R.png"></li>
+					<li class="reel"><img src="kohacu.com_samune_000107.png"></li>
+					<li class="reel"><img src="melon-768x768.png"></li>
+					<li class="reel"><img src="R.png"></li>
+					<li class="reel"><img src="fruit_peach_illust_273.png"></li>
+					<li class="reel"><img src="fruit_grape_illust_108.png"></li>
 				</ul>
 			</div>
 		</div>
@@ -203,7 +201,6 @@
 						for (var index = 0; index<3; index++) {
 							Slot.animation(index);
 						}
-						//$('.btn-stop').css('background', '#ffaaaa');
 					},
 					/**
 					 * ストップボタンのクリックイベント
@@ -290,12 +287,10 @@
 				$('.btn-start').click(function () {
 					// スタートボタンを押せないようにする
 					$(this).attr('disabled', true);
-					$('.btn-start').css('background', '#4a4a4a');
 					// スロットの回転を開始
 					Slot.start();
 					// ストップボタンを押せるようにする
 					$('.btn-stop').attr('disabled', false);
-					$('.btn-stop').css('background', '#ffaaaa');
 				});
 
 				/**
@@ -304,13 +299,10 @@
 				$('.btn-reset').click(function () {
 					// リセットボタンを押せないようにする
 					$(this).attr('disabled', true);
-					$('.btn-reset').css('background', '#4a4a4a');
 					// スタートボタンを押せるようにする
 					$('.btn-start').attr('disabled', false);
-					$('.btn-start').css('background', '#ffaaaa');
 					// ストップボタンを押せないようにする
 					$('.btn-stop').attr('disabled', true);
-					$('.btn-stop').css('background', '#4a4a4a');
 					// スロットのリール情報を初期化
 					Slot.init();
 				});
@@ -321,7 +313,6 @@
 				$('.btn-stop').click(function () {
 					// ストップボタンを押せないようにする
 					$(this).attr('disabled', true);
-					$('.btn-stop').css('background', '#4a4a4a');
 					// レールの回転を停止
 					Slot.stop($(this).attr('data-val'));
 				});
